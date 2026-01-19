@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+  font-weight: 700;
+}
+
+/* TODO: descargar la fuente Fraunces desde Google fonts y usarla en el body */
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url(fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format('truetype');
+  font-weight: 700;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+
+  font-size: 14px;
+
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Fraunces', sans-serif; */
+
+  display: flex;
+  /* Flexbox */
+
+  height: 100vh;
+  /* vh <> Viewport height */
+
+  justify-content: center;
+  /* Aliamiento horizontal */
+  align-items: center;
+  /* Alineamiento vertical */
+
+}
+
+main {
+  display: flex;
+  /* Flexbox */
+  
+  width: 650px;
+  min-height: 400px;
+  
+  overflow: hidden; /*Recorta el desbordamiento y se oculta el resto del contenido*/
+  border-radius: 7px;
+  
+}
+
+.photo {
+  /* border: 1px solid blue; */
+
+  width: 350px;
+
+  background-image: url(images/image-product-desktop.jpg);
+  background-size: cover;
+}
+
+.content {
+  /* border: 1px solid orange; */
+
+  width: 300px;
+
+  padding: 28px;
+  /* Espacio entre el borde y el contenido */
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 21px;
+  /* 14px + 7px */
+
+  background-color: hsl(0, 0%, 100%);
+}
+
+
+.content h2 {
+  /* Selectores combinados */
+  /* border: 1px solid green; */
+
+  margin: 0;
+  /* resetea el margen de este h2 */
+
+  text-transform: uppercase;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  letter-spacing: 7px;
+}
+
+/* TODO: Terminar con los estilos de las etiquetas h1 y p aplicando colores, fuentes, tamaños */
+
+.content h1 {
+  /* border: 1px solid green; */
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  color: hsl(158, 42%, 18%);
+
+  /* resetea el margen de este h1 */
+}
+
+.content p {
+  margin: 0;
+
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.content div {
+  display: flex;
+  align-items: center;
+  /* Alinea los elemenos hijos verticalmente*/
+  gap: 28px;
+}
+
+.content span {
+  font-family: 'Fraunces', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.content s {
+  color: hsl(228, 12%, 48%);
+}
+
+.content button {
+  border: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: white;
+
+  /* hsl(0, 0%, 100%) */
+  background-color: hsl(158, 36%, 37%);
+
+  padding: 14px;
+  border-radius: 7px;
+  
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
