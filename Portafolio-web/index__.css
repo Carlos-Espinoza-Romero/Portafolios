@@ -1,0 +1,518 @@
+/* VARIABLES */
+
+:root {
+  /* FONTS */
+
+  --font-primary: "Poppins", sans-serif;
+  --font-size: 16px;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* COLORS */
+
+  --primary-color-gold: #FFB742;
+  --primary-color-dark-blue: #393646;
+  --primary-color-dark-violet: #4F4557;
+  --primary-color-light-violet: #6D5D6E;
+  --primary-color-white: #FFFFFF;
+}
+
+/* GENERALES */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: var(--font-size);
+
+  /* REM */
+}
+
+body {
+  font-family: var(--font-primary);
+
+  background-color: var(--primary-color-dark-violet);
+
+  color: var(--primary-color-white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* UTILS */
+
+.hidden {
+  display: none !important;
+}/*Borrador*/
+
+.wrapper {
+  width: min(100% - 3rem, 1220px);
+  
+  margin: 0 auto;
+}
+
+/* HEADER SECTION */
+
+/* TODO: Terminar con el css de la sección Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  /* 32px = 2 x 16px */
+
+}
+
+.header__logo {
+  color: var(--primary-color-gold);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+
+}
+
+/*Mobile*/
+.header__menu {
+  display: none;
+}
+
+.header__menu a {
+  font-size: 1.125rem;
+  /* 18 x 16px = 1.125rem */
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+  transition: color 0.3s ease, transform 0.2s ease;
+  /*tiempo de transicion*/
+}
+
+.header__menu a:hover {
+  color: var(--primary-color-gold);
+  transform: scale(1.1);
+  transform: rotate(15deg);
+}
+
+.header__menu .header__menu--active {
+  color: var(--primary-color-gold);
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--primary-color-gold);
+  /* text-decoration: underline; */
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*Desktop*/
+@media (min-width: 992px) {
+  .header__menu {
+    display: flex;
+    gap: 1.5rem;
+    /* 1.5 x 16px = 24px */
+  }
+
+  .header__img__menu {
+    display: none;
+  }
+}
+
+/* HERO SECTION */
+
+/* TODO: Terminar el diseño con css de la sección hero usando la maquetación en html */
+
+.hero {
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+
+  padding: 4rem;
+
+  background-image: url(images/bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.hero--bg {
+  background-image: url(images/bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+/*Mobile*/
+  .hero__greeting {
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .hero__greeting span {
+    color: var(--primary-color-gold);
+    text-decoration: underline;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .hero__description {
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+  }
+
+  .hero__photo {
+    width: 180px;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+
+  }
+
+
+
+  .stack {
+    /* border: 1px solid yellow; */
+
+    display: grid;
+    /* grid-template-columns: 150px 150px 150px 150px 150px 150px; */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stack__wrapper {
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stack__title {
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 0.5rem;
+  }
+
+  .stack__box {
+    background-color: var(--primary-color-dark-violet);
+    width: 7rem;
+    /* 112px = 7rem */
+    height: 7rem;
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stack__box img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+@media (min-width: 562px) {
+  .stack {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*Desktop*/
+@media (min-width: 992px) {
+  .hero__greeting {
+    font-size: 32px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .hero__description {
+    font-size: 24px;
+  }
+
+  .hero__photo {
+    width: 278px;
+    height: auto;
+  }
+
+  .stack {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+}
+
+
+
+
+
+
+
+/*Hero
+
+/*Skills*/
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 4rem;
+  margin-bottom: 4rem;
+
+}
+
+/*Mobile*/
+  .skill {
+    margin-bottom: 3rem;
+  }
+
+  .pyramid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .cube {
+    display: flex;
+    gap: .5rem;
+  }
+
+  .cube img {
+    background-color: var(--primary-color-dark-blue);
+    border-radius: .5rem;
+    width: 3.5rem;
+    padding: 1rem;
+  }
+
+
+/*Desktop*/
+@media (min-width: 992px) {
+
+  .skills {
+    flex-direction: row;
+  }
+
+  .skill {
+    width: 50%;
+  }
+
+  .skill__greeting {
+    font-size: 1.5rem;
+    color: var(--primary-color-gold);
+
+    background-color: var(--primary-color-light-violet);
+    border-radius: 1rem;
+    width: 14rem;
+    height: auto;
+
+    text-align: center;
+
+
+
+  }
+
+  .skill__title {
+    font-size: 3rem;
+    max-width: 638px;
+    margin-left: 2rem;
+  }
+
+  .skill__description {
+    font-size: 1rem;
+    max-width: 473px;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skill__more {
+    font-size: 1rem;
+    margin-left: 2rem;
+  }
+
+  .skill__more span {
+    color: var(--primary-color-gold);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .pyramid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    gap: 2rem;
+  }
+
+  .pyramid img {
+    width: 5rem;
+  }
+
+  .cube {
+    display: flex;
+    gap: 2rem;
+  }
+
+}
+
+/*Skills*/
+
+
+/*Portfolio*/
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 2rem;
+
+}
+
+/*Mobile*/
+  .portfolio__greeting {
+    color: var(--primary-color-gold);
+    font-size: 1rem;
+    background-color: var(--primary-color-light-violet);
+    padding: .3rem 1rem;
+    border-radius: 2rem;
+
+  }
+
+  .portfolio__title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .portfolio__links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio__links a {
+    font-size: .90rem;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .portfolio__links__active {
+    color: var(--primary-color-gold);
+    border-bottom: .2rem solid var(--primary-color-gold);
+    padding-bottom: .1rem;
+  }
+
+  .portfolio__products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+
+  }
+
+  .portfolio__products img {
+    width: 10rem;
+  }
+
+
+/*Desktop*/
+@media (min-width: 992px) {
+  .portfolio__greeting {
+    font-size: 1.5rem;
+
+  }
+
+  .portfolio__title {
+    font-size: 3rem;
+  }
+
+  .portfolio__links a {
+    font-size: 1rem;
+  }
+
+  .portfolio__products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+
+  }
+
+  .portfolio__products img {
+    width: 20rem;
+  }
+}
+
+/*Porfolio*/
+
+
+/*Footer*/
+
+/*Mobile*/
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    background-image: url(images/bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    width: 100%
+  }
+
+  .footer__logo {
+    color: var(--primary-color-gold);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    position: relative;
+    top: 3.5rem;
+  }
+
+  .footer__description {
+    font-weight: var(--font-weight-semibold);
+    position: relative;
+  }
+
+/*Desktop*/
+@media (min-width: 992px) {
+  .footer {
+    gap: 21rem;
+
+
+    background-image: url(images/bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    width: 100%
+  }
+
+  .footer__logo {
+    font-size: 2.5rem;
+    top: 14rem;
+  }
+
+  .footer__description {
+    bottom: 3rem;
+  }
+}
+
+/*Desktop*/
+
+/*Footer*/
