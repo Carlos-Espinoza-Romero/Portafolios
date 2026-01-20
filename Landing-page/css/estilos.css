@@ -1,0 +1,527 @@
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERALES */
+
+* {
+  /* Selector universal */
+  box-sizing: border-box;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+
+html {
+  font-size: 14px;
+}
+
+/* font-family: "Raleway", sans-serif;
+font-family: "Open Sans", sans-serif; */
+
+body {
+  font-family: "Open Sans", sans-serif;
+
+  background-color: hsl(218, 28%, 13%);
+
+  color: hsl(0, 0%, 100%);
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+
+  height: auto;
+}
+
+/* UTILS */
+
+.wrapper {
+  /* width: 1440px; */
+  width: min(100% - 42px, 1440px);
+  background-color: hsl(217, 28%, 15%);
+
+  /* border: 1px solid blue; */
+}
+
+/*Borrdor de sección*/
+.hidden {
+  display: none !important;
+}
+
+/********************/
+
+/* HEADER SECTION (INICIO)*/
+
+.header {
+  /* border: 1px solid red; */
+  background-color: hsl(217, 28%, 15%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+  margin-top: 42px;
+}
+
+
+.header__nav {
+  /* TODO: terminar el css de este nav */
+  display: flex;
+  gap: 42px;
+  /* 42px = 14 * 3 */
+}
+
+/* HEADER SECTION */
+
+
+/* HERO SECTION */
+
+/* TODO : Terminar el css para la sección abajo del header(hero). Usen bem para el nombrado de las clases y reutilicen la función min. */
+
+
+.hero {
+  /* border: 1px solid red; */
+
+  background-color: hsl(217, 28%, 15%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /* 14px * 2 = 28px = 2rem */
+  /* REM : Root EM(Ancho de la letra M) o Entidad de Medida Relativa */
+
+
+  padding-top: 3rem;
+  /* 3 x 14px = 42px */
+  padding-bottom: 12rem;
+  /* 12 x 14px = 168px */
+
+  background-image: url(../images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    background-image: url(../images/bg-curvy-desktop.svg);
+  }
+}
+
+.hero__image {
+  max-width: 100%;
+
+  height: auto;
+}
+
+.hero__title {
+
+  /* width: 720px; */
+  /* Elige el valor más pequeño entre el tamaño de la pantalla disponible hasta plantarse en un maximo de 720px y le restamos 3rem(48px) al 100% de la pantalla que a tomado en pantallas menores a 720px*/
+  width: min(100% - 3rem, 720px);
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  /* por defecto */
+  font-size: 2.5rem;
+
+  text-align: center;
+}
+
+
+.hero__text {
+  /* TODO: Terminar de aplicar los estilos al parrafo del hero */
+  width: min(100% - 3rem, 720px);
+
+  font-size: 1.2rem;
+
+  text-align: center;
+
+}
+
+.hero__button {
+  font-weight: 700;
+
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem;
+  min-width: 220px;
+  color: hsl(0, 0%, 100%);
+
+  background: linear-gradient(90deg,
+      hsl(176, 68%, 64%) 0%,
+      hsl(198, 60%, 50%) 100%);
+}
+
+
+/* FEATURES SECTION */
+
+.features {
+  /*Contenedor padre de todos los "article"*/
+  background-color: hsl(218, 28%, 13%);
+
+  display: grid;
+  grid-template-columns: 340px;
+  justify-content: center;
+  gap: 5rem;
+}
+
+@media (min-width: 992px) {
+
+  /*Si es mayor de 1280px aplica si es menor no aplica.*/
+  .features {
+    grid-template-columns: 340px 340px;
+  }
+
+}
+
+.feature {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.feature__image {
+  max-width: 100%;
+
+  height: auto;
+}
+
+.feature__title {
+
+  font-family: "Raleway", sans-serif;
+
+  text-align: center;
+}
+
+.feature__text {
+  text-align: center;
+}
+
+/*FEATURES SECTION*/
+
+/*COLLABORATION SECTION*/
+
+.collaboration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+
+  margin-top: 4rem;
+
+  padding: 4rem;
+
+}
+
+@media (min-width: 992px) {
+  .collaboration {
+    flex-direction: row;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+
+.productive {
+  display: flex;
+  flex-direction: column;
+
+  padding: 4rem;
+
+  gap: 2rem;
+}
+
+
+.productive__title {
+  font-family: 'raleway', sans-serif;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  ;
+}
+
+.productive__text {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+.productive__link {
+  display: flex;
+  gap: 0.5rem;
+
+  align-items: center;
+  text-decoration: none;
+
+  color: aqua;
+
+  font-weight: lighter;
+
+}
+
+
+/*COLLABORATION SECTION*/
+
+
+/*TESTIMONIALS SECTION*/
+
+.testimonials {
+  /* border: 1px solid red; */
+
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+  background-color: hsl(218, 28%, 13%);
+
+}
+
+.testimonials--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: hsl(218, 28%, 13%);
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .testimonials--wrapper {
+    flex-direction: row;
+
+  }
+}
+
+/* TODO: Añadir el media query para ver las cajas de testimonios en fila con flexbox */
+
+/* 
+  pseudo-elemento: :after, :before
+  selectores: ?????
+*/
+
+.testimonial {
+  /* border: 1px solid yellow; */
+
+  background-color: hsl(219, 30%, 18%);
+  width: 30rem;
+  height: auto;
+
+  /* padding: TOP-RIGHT-BOTTOM-LEFT */
+  /* padding: TOP RIGHT BOTTOM LEFT */
+  padding: 4rem 2rem 1.5rem 2rem;
+  border-radius: .5rem;
+
+  position: relative;
+}
+
+.testimonial:first-child:before {
+  content: '';
+
+  background-image: url(../images/bg-quotes.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: block;
+  width: 55px;
+  height: 45px;
+
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  z-index: -1;
+}
+
+.testimonial__text {
+  font-size: 1.2rem;
+  line-height: 2rem;
+
+  /* border: 1px solid yellow; */
+
+  margin-bottom: 2rem;
+}
+
+.testimonial__profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  font-size: .9rem;
+}
+
+.testimonial__avatar {
+  width: 3rem;
+  height: auto;
+  border-radius: 50%;
+}
+
+.testimonial__user h4 {
+  font-weight: 700;
+  /* Por defecto para el h4 */
+}
+
+.testimonial__user h5 {
+  font-weight: 400;
+}
+
+/*FORM SECTION*/
+.forms {
+  background-color: hsl(217, 28%, 15%);
+
+  padding: 2rem 2rem 2rem 2rem;
+  margin: 0 auto;
+
+  height: 25rem;
+  width: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  position: relative;
+
+  top: 10rem;
+
+  text-align: center;
+  align-items: center;
+
+}
+
+@media (min-width: 992px) {
+  .forms {
+    flex-direction: column;
+
+    height: 18rem;
+    width: 70rem;
+
+    top: 7rem;
+
+  }
+}
+
+.form__text {
+  max-width: 45rem;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .form {
+    flex-direction: row;
+  }
+
+}
+
+.form__email {
+  width: 25rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 2rem;
+  text-align: start;
+  padding-left: 2rem;
+}
+
+.form__submit {
+  width: 25rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 2.8rem;
+
+  background: linear-gradient(90deg,
+      hsl(176, 68%, 64%) 0%,
+      hsl(198, 60%, 50%) 100%);
+  color: hsl(0, 0%, 100%);
+
+  font-weight: 700
+}
+
+@media (min-width: 992px) {
+.form__submit {
+    width: 15rem;
+  }
+}
+/*FORM SECTION*/
+
+/*FOOTER SECTION*/
+
+.footer {
+  background-color: hsl(216, 53%, 9%);
+
+  padding: 15rem 0 5rem 0;
+
+
+}
+
+.footer--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  margin: 0 auto;
+
+  background-color: transparent;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .footer-info {
+    flex-direction: row;
+  }
+}
+
+.footer-info__decription {
+  width: 22rem;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1.5rem;
+}
+
+.footer-info__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-info__contact span {
+  display: flex;
+
+  gap: 1.5rem;
+}
+
+.footer-info__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-info__social {
+  display: flex;
+  gap: 1.5rem;
+}
