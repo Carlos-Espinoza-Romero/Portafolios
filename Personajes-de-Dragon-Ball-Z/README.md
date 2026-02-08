@@ -1,5 +1,5 @@
 # Personajes de Dragon Ball Z
-En este programa utilizamos JavaScript para listar los personajes de Dragon Ball consumiendo una API, marcar personajes favoritos y contarlos.
+En este programa utilizo JavaScript para listar los personajes de Dragon Ball consumiendo una API, marcar personajes favoritos y contarlos.
 Objetivos:
  Consumir datos desde una API.
  Manipular el DOM dinámicamente.
@@ -7,3 +7,4 @@ Objetivos:
  Implementar paginación.
  
 Sitio Web: https://proyecto-final-dragon-ball-characters.netlify.app/
+
